@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Ordering</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-header">
+        <header>
+          <h1>Mamma Maria</h1>
+        </header>
+      </div>
+    </div>
+    <div class="flex-horizontal-1">
+      <div class="flex-item-form">
+        <h2>Pizza ordering</h2>
+
+        <form>
+          <div class="form-group">
+            <label for="firstname"><h3>Your name</h3></label>
+            <input type="text" name="name" id="name" required />
+          </div>
+
+          <div class="form-group">
+            <h3>Pizza size</h3>
+            <label for="size-2">2 servings</label>
+            <input
+              type="radio"
+              name="pizza-size"
+              id="size-2"
+              value="10.50"
+              required
+            />
+
+            <label for="size-4">4 servings</label>
+            <input
+              type="radio"
+              name="pizza-size"
+              id="size-4"
+              value="12.50"
+              required
+            />
+
+            <label for="size-6">6 servings</label>
+            <input
+              type="radio"
+              name="pizza-size"
+              id="size-6"
+              value="15.50"
+              required
+            />
+
+            <label for="size-8">8 servings</label>
+            <input
+              type="radio"
+              name="pizza-size"
+              id="size-8"
+              value="17.50"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <h3>Toppings</h3>
+            <label for="topping-1">Prosciutto cotto</label>
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-1"
+              value="Prosciutto cotto"
+            />
+
+            <label for="topping-2">Nduja Salami</label>
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-2"
+              value="Nduja Salami"
+            />
+
+            <label for="topping-3">Bresaola</label>
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-3"
+              value="Bresaola"
+            />
+
+            <label for="topping-4">Tuna</label>
+            <input type="checkbox" name="topping" id="topping-4" value="Tuna" />
+
+            <label for="topping-5">Portobello</label>
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-5"
+              value="Portobello"
+            />
+
+            <label for="topping-6">Porcini</label>
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-6"
+              value="Porcini"
+            />
+
+            <label for="topping-7">Fior di Latte</label>
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-7"
+              value="Fior di Latte"
+            />
+
+            <label for="topping-8">Mozzarella</label>
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-8"
+              value="Mozzarella"
+            />
+
+            <label for="topping-9">Gorgonzola</label>
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-9"
+              value="Gorgonzola"
+            />
+
+            <label for="topping-10">Parmigiano Reggiano</label>
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-10"
+              value="Parmigiano Reggiano"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="flex-item-info">
+        <label for="delivery-method"
+          ><h3>Choose your delivery method</h3></label
+        >
+        <form>
+          <div class="form-group">
+            <select name="delivery-method" id="delivery-method">
+              <option value="We will deliver to your Home">
+                Delivery Home
+              </option>
+              <option value="Eat in">Eat in</option>
+              <option value="Pick up">Pick up</option>
+            </select>
+          </div>
+
+          <button onclick="orderingPizza()" class="button" type="button">
+            Check your order first
+          </button>
+          <p id="orderingInfo"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
