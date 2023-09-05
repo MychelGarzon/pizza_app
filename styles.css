@@ -5,16 +5,16 @@
 }
 
 body {
-  font-family: 'roboto', sans-serif;
-  background-color: whitesmoke;
+  font-family: 'simoneta';
+  color: #495551;
+  max-height: 800px;
 }
 
 .flex-container header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: green;
-  padding: 15px;
+  background-color: #fff8f5;
 }
 
 .flex-horizontal-1 {
@@ -28,8 +28,16 @@ body {
   width: 200px;
   padding: 20px;
   border-radius: 7px;
-  background-color: white;
+  background-color: #fff8f5;
   text-align: center;
+}
+.flex-item-form table {
+  margin: 0 auto;
+  color: grey;
+}
+td {
+  padding-right: 10px;
+  font-size: 15px;
 }
 
 .flex-item-form label {
@@ -45,8 +53,8 @@ body {
   width: 200px;
   padding: 20px;
   border-radius: 7px;
-  background-color: black;
-  color: white;
+  background-color: #fff8f5;
+  color: #495551;
   text-align: center;
 }
 
@@ -61,13 +69,13 @@ input {
 .flex-item-info button {
   width: 40%;
   background: salmon;
-  color: white;
+  color: #495551;
   padding: 10px;
   border-radius: 5px;
   border: none;
   font-size: 12px;
   text-transform: uppercase;
-  margin: 60px;
+  margin: 50px;
 }
 
 .flex-horizontal-1 .bottom-text a:hover {

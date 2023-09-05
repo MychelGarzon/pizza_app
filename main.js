@@ -10,14 +10,14 @@ const orderingPizza = () => {
   let deliveryCost = 0;
 
   const deliveryMethod = document.getElementById('delivery-method').value;
-  if (deliveryMethod === 'We will deliver to your Home') {
+  if (deliveryMethod === 'We will deliver your pizza within 1 hour') {
     deliveryCost = 5.0;
   }
   if (name == '') {
     text = 'Please type your name';
   } else {
     let total = parseFloat(pizzaSizeValue) + deliveryCost;
-    text = `Hello ${name}, at the moment your total is ${total}€. We will prepare your food for ${deliveryMethod}.`;
+    text = `Hello ${name}, at the moment your total is ${total}€. ${deliveryMethod}.`;
   }
 
   orderingInfo.textContent = text;
