@@ -11,184 +11,67 @@
     />
   </head>
   <body>
-    <div class="flex-container">
-      <div class="flex-header">
-        <header>
-          <img src="best.png" width="300" height="300" />
-        </header>
-      </div>
+    <div class="flex-header">
+      <header>
+        <img src="best.png" width="250" height="250" />
+      </header>
     </div>
+
     <div class="flex-horizontal-1">
-      <div class="flex-item-form">
-        <h2>Place your pizza order</h2>
+      <div class="flex-item-form-1">
+        <div class="form-group">
+          <label for="firstname"><h3>Your name</h3></label>
+          <input type="text" name="name" id="name" />
+        </div>
 
-        <form>
-          <div class="form-group">
-            <label for="firstname"><h3>Your name</h3></label>
-            <input type="text" name="name" id="name" />
-          </div>
+        <div class="form-group">
+          <h3>Pizza size</h3>
 
-          <div class="form-group">
-            <h3>Pizza size</h3>
-            <table>
-              <tr>
-                <td>
-                  <label for="size-2">2 servings</label>
-                  <input
-                    type="radio"
-                    name="pizza-size"
-                    id="size-2"
-                    value="10.50"
-                    required
-                  />
-                </td>
-                <td>
-                  <label for="size-4">4 servings</label>
-                  <input
-                    type="radio"
-                    name="pizza-size"
-                    id="size-4"
-                    value="12.50"
-                    required
-                  />
-                </td>
-                <td>
-                  <label for="size-6">6 servings</label>
-                  <input
-                    type="radio"
-                    name="pizza-size"
-                    id="size-6"
-                    value="15.50"
-                    required
-                  />
-                </td>
-                <td>
-                  <label for="size-8">8 servings</label>
-                  <input
-                    type="radio"
-                    name="pizza-size"
-                    id="size-8"
-                    value="17.50"
-                    required
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>10.50€</td>
-                <td>12.50€</td>
-                <td>15.50€</td>
-                <td>17.50€</td>
-              </tr>
-            </table>
-          </div>
+          <label for="size-2">
+            <input
+              type="radio"
+              name="pizza-size"
+              id="size-2"
+              value="10.50"
+              required
+            /><span>2 servings 10.50€</span>
+          </label>
 
-          <div class="form-group">
-            <h3>Toppings</h3>
-            <table>
-              <tr>
-                <td>
-                  <label for="topping-1">Prosciutto cotto</label>
-                  <input
-                    type="checkbox"
-                    name="topping"
-                    id="topping-1"
-                    value="Prosciutto cotto"
-                  />
-                </td>
-                <td>
-                  <label for="topping-2">Nduja Salami</label>
-                  <input
-                    type="checkbox"
-                    name="topping"
-                    id="topping-2"
-                    value="Nduja Salami"
-                  />
-                </td>
-                <td>
-                  <label for="topping-3">Bresaola</label>
-                  <input
-                    type="checkbox"
-                    name="topping"
-                    id="topping-3"
-                    value="Bresaola"
-                  />
-                </td>
-                <td>
-                  <label for="topping-4">Tuna</label>
-                  <input
-                    type="checkbox"
-                    name="topping"
-                    id="topping-4"
-                    value="Tuna"
-                  />
-                </td>
-                <td>
-                  <label for="topping-5">Portobello</label>
-                  <input
-                    type="checkbox"
-                    name="topping"
-                    id="topping-5"
-                    value="Portobello"
-                  />
-                </td>
-              </tr>
+          <label for="size-4">
+            <input
+              type="radio"
+              name="pizza-size"
+              id="size-4"
+              value="12.50"
+              required
+            />
+            <span>4 servings 12.50€</span>
+          </label>
 
-              <tr>
-                <td>
-                  <label for="topping-6">Porcini</label>
-                  <input
-                    type="checkbox"
-                    name="topping"
-                    id="topping-6"
-                    value="Porcini"
-                  />
-                </td>
-                <td>
-                  <label for="topping-7">Fior di Latte</label>
-                  <input
-                    type="checkbox"
-                    name="topping"
-                    id="topping-7"
-                    value="Fior di Latte"
-                  />
-                </td>
-                <td>
-                  <label for="topping-8">Mozzarella</label>
-                  <input
-                    type="checkbox"
-                    name="topping"
-                    id="topping-8"
-                    value="Mozzarella"
-                  />
-                </td>
-                <td>
-                  <label for="topping-9">Gorgonzola</label>
-                  <input
-                    type="checkbox"
-                    name="topping"
-                    id="topping-9"
-                    value="Gorgonzola"
-                  />
-                </td>
-                <td>
-                  <label for="topping-10">Parmigiano Reggiano</label>
-                  <input
-                    type="checkbox"
-                    name="topping"
-                    id="topping-10"
-                    value="Parmigiano Reggiano"
-                  />
-                </td>
-              </tr>
-            </table>
-          </div>
-        </form>
-      </div>
-      <div class="flex-item-info">
-        <label for="delivery-method"
-          ><h3>Choose your delivery method</h3></label
-        >
-        <form>
+          <label for="size-6">
+            <input
+              type="radio"
+              name="pizza-size"
+              id="size-6"
+              value="15.50"
+              required
+            />
+            <span>6 servings 15.50€</span>
+          </label>
+
+          <label for="size-8">
+            <input
+              type="radio"
+              name="pizza-size"
+              id="size-8"
+              value="17.50"
+              required
+            />
+            <span>8 servings 17.50€</span>
+          </label>
+          <label for="delivery-method"
+            ><h3>Choose your delivery method</h3></label
+          >
           <div class="form-group">
             <select name="delivery-method" id="delivery-method">
               <option value="We will deliver your pizza within 1 hour">
@@ -202,15 +85,106 @@
               </option>
             </select>
           </div>
-
-          <button onclick="orderingPizza()" class="button" type="button">
-            Check your order first
-          </button>
-          <p id="orderingInfo"></p>
-        </form>
+        </div>
       </div>
-    </div>
+      <div class="flex-item-form-2">
+        <div class="form-group">
+          <h3>Toppings</h3>
+          <label for="topping-1">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-1"
+              value="Prosciutto cotto"
+            />
+            <span>Prosciutto cotto</span>
+          </label>
 
+          <label for="topping-2">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-2"
+              value="Nduja Salami"
+            />
+            <span>Nduja Salami</span>
+          </label>
+          <label for="topping-3">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-3"
+              value="Bresaola"
+            />
+            <span>Bresaola</span>
+          </label>
+          <label for="topping-4">
+            <input type="checkbox" name="topping" id="topping-4" value="Tuna" />
+            <span>Tuna</span>
+          </label>
+          <label for="topping-5">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-5"
+              value="Portobello"
+            />
+            <span>Portobello</span>
+          </label>
+
+          <label for="topping-6">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-6"
+              value="Porcini"
+            />
+            <span>Porcini</span>
+          </label>
+          <label for="topping-7">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-7"
+              value="Fior di Latte"
+            />
+            <span>Fior di Latte</span>
+          </label>
+          <label for="topping-8">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-8"
+              value="Mozzarella"
+            />
+            <span>Mozzarella</span>
+          </label>
+          <label for="topping-9">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-9"
+              value="Gorgonzola"
+            />
+            <span>Gorgonzola</span>
+          </label>
+          <label for="topping-10">
+            <input
+              type="checkbox"
+              name="topping"
+              id="topping-10"
+              value="Parmigiano Reggiano"
+            />
+            <span>Parmigiano Reggiano</span>
+          </label>
+        </div>
+        <button onclick="orderingPizza()" class="button" type="button">
+          Check your order first
+        </button>
+      </div>
+
+      <div class="flex-item-info"><p id="orderingInfo"></p></div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

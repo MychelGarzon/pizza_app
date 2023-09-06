@@ -1,11 +1,22 @@
 const orderingPizza = () => {
+  const orderingInfo = document.getElementById('orderingInfo');
+
   const name = document.querySelector('#name').value;
   const pizzaSizeValue = document.querySelector(
     'input[name="pizza-size"]:checked'
   )?.value;
-  const pizzaTopping = document.querySelector(
+  const pizzaTopping = document.querySelectorAll(
     'input[name="topping"]:checked'
-  )?.value;
+  );
+
+  let count = 0;
+  let extraTopping = 0;
+  if (pizzaTopping.length > 4) {
+    pizzaTopping.forEach((checkbox) => {
+      count++;
+    });
+    extraTopping = (count - 4) * 0.5;
+  }
 
   let deliveryCost = 0;
 
@@ -17,7 +28,8 @@ const orderingPizza = () => {
     text = 'Please type your name';
   } else {
     let total = parseFloat(pizzaSizeValue) + deliveryCost;
-    text = `Hello ${name}, at the moment your total is ${total}€. ${deliveryMethod}.`;
+    text = `Hello ${name}, at the moment your total is ${total}€. ${deliveryMethod}.
+    your extra topping will cost ${extraTopping}€`;
   }
 
   orderingInfo.textContent = text;
