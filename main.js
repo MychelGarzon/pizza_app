@@ -27,9 +27,9 @@ const orderingPizza = () => {
   if (name == '') {
     text = 'Please type your name';
   } else {
-    let total = parseFloat(pizzaSizeValue) + deliveryCost;
-    text = `Hello ${name}, at the moment your total is ${total}€. ${deliveryMethod}.
-    your extra topping will cost ${extraTopping}€`;
+    let total = parseFloat(pizzaSizeValue) + deliveryCost + extraTopping;
+    text = `Hello ${name}. Your total order is ${total}€. ${deliveryMethod}.
+    `;
   }
 
   orderingInfo.textContent = text;

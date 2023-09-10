@@ -11,21 +11,37 @@
     />
   </head>
   <body>
-    <div class="flex-header">
-      <header>
-        <img src="best.png" width="250" height="250" />
-      </header>
-    </div>
-
     <div class="flex-horizontal-1">
+      <div class="flex-header">
+        <header>
+          <img src="/Pictures/logo2.png" />
+        </header>
+      </div>
+
       <div class="flex-item-form-1">
         <div class="form-group">
-          <label for="firstname"><h3>Your name</h3></label>
+          <label for="firstname"><h3>1. Share your name</h3></label>
           <input type="text" name="name" id="name" />
+        </div>
+        <div class="form-group">
+          <label for="delivery-method"
+            ><h3>2. Decide on the delivery method</h3></label
+          >
+          <select name="delivery-method" id="delivery-method">
+            <option value="Choose delivery method">Choose here</option>
+            <option value="We will deliver your pizza within 1 hour">
+              Home delivery +5€
+            </option>
+            <option value="We will have a table waiting for you">Eat in</option>
+            <option value="Your pizza will be ready for pick up">
+              Pick up
+            </option>
+          </select>
         </div>
 
         <div class="form-group">
-          <h3>Pizza size</h3>
+          <img id="Pizza-size" src="/Pictures/Pizza-size.png" />
+          <h3>2. Select the pizza size</h3>
 
           <label for="size-2">
             <input
@@ -69,27 +85,13 @@
             />
             <span>8 servings 17.50€</span>
           </label>
-          <label for="delivery-method"
-            ><h3>Choose your delivery method</h3></label
-          >
-          <div class="form-group">
-            <select name="delivery-method" id="delivery-method">
-              <option value="We will deliver your pizza within 1 hour">
-                Home delivery +5€
-              </option>
-              <option value="We will have a table waiting for you">
-                Eat in
-              </option>
-              <option value="Your pizza will be ready for pick up">
-                Pick up
-              </option>
-            </select>
-          </div>
         </div>
       </div>
       <div class="flex-item-form-2">
         <div class="form-group">
-          <h3>Toppings</h3>
+          <h3>3. Choose your toppings</h3>
+          <h4>4 toppings are included.</h4>
+          <h4>Extra toppings a 0.50€.</h4>
           <label for="topping-1">
             <input
               type="checkbox"
@@ -178,13 +180,20 @@
             <span>Parmigiano Reggiano</span>
           </label>
         </div>
+
         <button onclick="orderingPizza()" class="button" type="button">
-          Check your order first
+          Click to check your order
         </button>
       </div>
 
-      <div class="flex-item-info"><p id="orderingInfo"></p></div>
+      <div class="flex-item-info">
+        <img id="pizza-background" src="/Pictures/Pizza2.png" />
+        <h3>Order information</h3>
+        <p id="orderingInfo"></p>
+      </div>
+      <div class="line"></div>
     </div>
+
     <script src="main.js"></script>
   </body>
 </html>
