@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="/styles.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Simonetta"
+      href="https://fonts.googleapis.com/css?family=roboto"
     />
   </head>
   <body>
-    <div class="flex-horizontal-1">
+    <div class="flex-horizontal-1" id="pizza-form">
       <div class="flex-header">
         <header>
           <img src="/Pictures/logo2.png" />
@@ -47,7 +47,7 @@
 
         <div class="form-group">
           <img id="Pizza-size" src="/Pictures/Pizza-size.png" />
-          <h3>2. Select the pizza size</h3>
+          <h3>3. Select the pizza size</h3>
 
           <label for="size-2">
             <input
@@ -95,9 +95,9 @@
       </div>
       <div class="flex-item-form-2">
         <div class="form-group">
-          <h3>3. Choose your toppings</h3>
-          <h4>4 toppings are included.</h4>
-          <h4>Extra toppings a 0.50€.</h4>
+          <h3>4. Choose your toppings</h3>
+          <h4>Four(4) toppings are included</h4>
+          <h4>Extra toppings 0.50€ per topping.</h4>
           <label for="topping-1">
             <input
               type="checkbox"
@@ -186,16 +186,18 @@
             <span>Parmigiano Reggiano</span>
           </label>
         </div>
-
-        <button onclick="orderingPizza()" class="button" type="button">
-          Click to check your order
-        </button>
       </div>
 
       <div class="flex-item-info">
         <img id="pizza-background" src="/Pictures/Pizza2.png" />
         <h3>Order information</h3>
         <p id="orderingInfo"></p>
+        <h3>Delivery Method</h3>
+        <p id="deliveryInfo"></p>
+        <h3>Toppings</h3>
+        <p id="finalToppings"></p>
+        <h3>Your price in € is</h3>
+        <p id="totalPrice"></p>
       </div>
       <div class="line"></div>
     </div>
