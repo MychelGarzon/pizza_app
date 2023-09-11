@@ -1,6 +1,5 @@
 const orderingPizza = () => {
   const orderingInfo = document.getElementById('orderingInfo');
-
   const name = document.querySelector('#name').value;
   const pizzaSizeValue = document.querySelector(
     'input[name="pizza-size"]:checked'
@@ -8,7 +7,6 @@ const orderingPizza = () => {
   const pizzaTopping = document.querySelectorAll(
     'input[name="topping"]:checked'
   );
-
   let count = 0;
   let extraTopping = 0;
   if (pizzaTopping.length > 4) {
@@ -28,7 +26,7 @@ const orderingPizza = () => {
     text = 'Please type your name';
   } else {
     let total = parseFloat(pizzaSizeValue) + deliveryCost + extraTopping;
-    text = `Hello ${name}. Your total order is ${total}€. ${deliveryMethod}.
+    text = `Hello ${name} Your total order is ${total}€ ${deliveryMethod}
     `;
   }
 

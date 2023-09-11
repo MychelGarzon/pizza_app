@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'simoneta';
+  font-family: 'roboto', sans-serif;
   color: #556b2f;
 }
 
@@ -13,9 +13,13 @@ header {
   display: flex;
   flex-direction: column;
   flex: 1;
-
   background-color: #556b2f;
   height: 100vh;
+  align-items: center;
+}
+
+header h2 {
+  padding-top: 50px;
 }
 
 header img {
@@ -86,7 +90,7 @@ select {
 }
 
 .flex-item-form-2 button {
-  width: 40%;
+  width: 100%;
   background: #556b2f;
   color: #fff8f5;
   padding: 10px;
@@ -95,6 +99,7 @@ select {
   font-size: 12px;
   text-transform: uppercase;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 
 .flex-horizontal-1 .buttom-text a:hover {
@@ -137,7 +142,7 @@ label span:before {
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  margin-right: 10px;
+  margin-right: 20px;
   box-shadow: inset 0 0 0 2px #556b2f;
 }
 .line {
@@ -147,6 +152,14 @@ label span:before {
   background-color: #556b2f;
   height: 100vh;
 }
+
+.social-media img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  display: flex;
+}
+
 input[type='radio']:checked + span:before {
   box-shadow: inset 0 0 0 10px #556b2f;
 }
