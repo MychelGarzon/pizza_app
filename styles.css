@@ -43,7 +43,7 @@ header img {
   text-align: center;
   flex-direction: column;
   padding: 30px 30px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .flex-item-form-1 img {
   width: 200px;
@@ -57,7 +57,7 @@ header img {
   background-color: #dadff7;
   text-align: left;
   padding: 30px 30px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .flex-item-info {
@@ -68,7 +68,7 @@ header img {
   width: 100%;
   flex: 1;
   background-color: #dadff7;
-  font-size: 1.5rem;
+  font-size: 1rem;
   align-items: center;
   text-align: center;
 }
@@ -84,7 +84,7 @@ input {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #556b2f;
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: #dadff7;
 }
 
@@ -94,7 +94,7 @@ select {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #556b2f;
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: transparent;
 }
 
