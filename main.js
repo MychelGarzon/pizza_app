@@ -1,46 +1,57 @@
-const orderingPizza = () => {
-  const orderingInfo = document.getElementById('orderingInfo');
-  const name = document.querySelector('#name').value;
-  const deliveryInfo = document.getElementById('deliveryInfo');
-  const finalToppings = document.getElementById('finalToppings');
+const form = document.querySelector('form');
 
-  const totalPrice = document.getElementById('totalPrice');
-  const pizzaSizeValue = document.querySelector(
-    'input[name="pizza-size"]:checked'
-  )?.value;
+const firstName = document.querySelector('#firstName');
+const pizzaSize = document.querySelectorAll('[name="pizza-size"]');
+const pizzaTopping = document.querySelectorAll('input[type="checkbox"]');
+const deliveryInfo = document.querySelector('#delivery-method');
+const orderingInfo = document.querySelector('#orderingInfo');
 
-  const pizzaTopping = document.querySelectorAll(
-    'input[name="topping"]:checked'
-  );
+const totalPrice = document.querySelector('#totalPrice');
 
-  let count = 0;
-  let extraTopping = 0;
-  let selectedToppings = '';
+const pizzaOrder = () => {
+  let selectedToppings = [];
+  let total = 0;
+  let sizePrice = '';
+  let deliveryResult = deliveryInfo.options[deliveryInfo.selectedIndex].value;
+  let customerName = firstName.value;
 
-  pizzaTopping.forEach((input) => {
-    count++;
-    selectedToppings += input.value + ',';
+  pizzaSize.forEach((item) => {
+    if (item.checked) {
+      sizePrice = item.id;
+    }
   });
 
-  if (count > 4) {
-    extraTopping = (count - 4) * 0.5;
+  switch (sizePrice) {
+    case 'size-2':
+      total += 7.5;
+      break;
+    case 'size-4':
+      total += 10.5;
+      break;
+    case 'size-6':
+      total += 12.5;
+      break;
+    case 'size-8':
+      total += 15.5;
+      break;
   }
 
-  let deliveryCost = 0;
+  pizzaTopping.forEach((item) => {
+    if (item.checked) {
+      selectedToppings.push(item.value);
+    }
+  });
 
-  const deliveryMethod = document.getElementById('delivery-method').value;
-  if (deliveryMethod === 'We will deliver your pizza within 1 hour') {
-    deliveryCost = 5.0;
+  if (selectedToppings.length > 4) {
+    total += (selectedToppings.length - 4) * 0.5;
   }
-  let total = 0;
-  total = parseFloat(pizzaSizeValue) + deliveryCost + extraTopping;
-  let text = `HellO! ${name} 
-`;
 
-  orderingInfo.textContent = text;
+  if (deliveryResult === 'We will deliver your pizza within 1 hour') {
+    total += 5.0;
+  }
+
+  let text = `Hello! ${customerName}`;
   totalPrice.textContent = total;
-  deliveryInfo.textContent = deliveryMethod;
-  finalToppings.textContent = selectedToppings;
 };
-const pizzaForm = document.getElementById('pizza-form');
-pizzaForm.addEventListener('change', orderingPizza);
+
+form.addEventListener('input', pizzaOrder);
